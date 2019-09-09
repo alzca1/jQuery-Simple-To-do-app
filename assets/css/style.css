@@ -14,6 +14,13 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+#container {
+  margin: 100px auto;
+  width: 360px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background: #f7f7f7;
+}
+
 h1 {
   background-color: #2980b9;
   color: white;
@@ -22,41 +29,6 @@ h1 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: normal;
-}
-
-#container {
-  margin: 100px auto;
-  width: 360px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  background: #f7f7f7;
-}
-
-li {
-  text-decoration: none;
-  background: white;
-  height: 40px;
-  line-height: 40px; /* buen método para que una línea de texto ocupe todo el espacio posible (y quede centrada verticalmente!!!) */
-  color: #666;
-}
-
-li:nth-child(2n) {
-  /* OJO!!!! cada segundo elemento va en gris; recordar método!!! */
-  background: #f7f7f7;
-}
-
-.completed {
-  color: gray;
-  text-decoration: line-through;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: justify;
-}
-::placeholder {
-  color: lightgray;
 }
 input {
   color: #2980b9;
@@ -74,12 +46,29 @@ input:focus {
   outline: none; /* quita el borde resaltado por defecto */
 }
 
-.fa-plus-circle {
-  float: right;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
 }
 
-.fa-thrash-alt {
-  width: 0px;
+li {
+  text-decoration: none;
+  background: white;
+  height: 40px;
+  line-height: 40px; /* buen método para que una línea de texto ocupe todo el espacio posible (y quede centrada verticalmente!!!) */
+  color: #666;
+}
+
+li:hover span {
+  width: 40px;
+  opacity: 1;
+}
+
+li:nth-child(2n) {
+  /* OJO!!!! cada segundo elemento va en gris; recordar método!!! */
+  background: #f7f7f7;
 }
 
 span {
@@ -94,11 +83,19 @@ span {
   transition: 0.2s linear;
 }
 
-li:hover span {
-  width: 40px;
-  opacity: 1;
+.completed {
+  color: gray;
+  text-decoration: line-through;
 }
 
-.hide {
-  display: none;
+::placeholder {
+  color: lightgray;
+}
+
+.fa-plus-circle {
+  float: right;
+}
+
+.fa-thrash-alt {
+  width: 0px;
 }
